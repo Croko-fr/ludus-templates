@@ -11,7 +11,7 @@ variable "os" {
 
 variable "iso_url" {
   type    = string
-  default = "https://mirror.ibcp.fr/pub/almalinux/9.5/isos/x86_64/AlmaLinux-9.5-x86_64-minimal.iso"
+  default = "https://vault.almalinux.org/9.5/isos/x86_64/AlmaLinux-9.5-x86_64-minimal.iso"
 }
 
 variable "vm_cpu_cores" {
