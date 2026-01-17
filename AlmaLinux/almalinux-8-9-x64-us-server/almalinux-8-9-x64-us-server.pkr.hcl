@@ -1,6 +1,6 @@
 variable "iso_checksum" {
   type    = string
-  default = "sha256:72fb1451e7d21418c2f4d94e63884fdb92dd7cba34d499dd4a070b6f5b4f150a"
+  default = "sha256:fc866e1280e7b3f066b1380e831e33e7f3e78bc9db7bfc27744d569eadd974b3"
 }
 
 # The operating system. Can be wxp, w2k, w2k3, w2k8, wvista, win7, win8, win10, l24 (Linux 2.4), l26 (Linux 2.6+), solaris or other. Defaults to other.
@@ -11,7 +11,7 @@ variable "os" {
 
 variable "iso_url" {
   type    = string
-  default = "https://vault.almalinux.org/8.10-beta/isos/x86_64/AlmaLinux-8.10-beta-1-x86_64-minimal.iso"
+  default = "https://vault.almalinux.org/8.9/isos/x86_64/AlmaLinux-8.9-x86_64-minimal.iso"
 }
 
 variable "vm_cpu_cores" {
@@ -31,7 +31,7 @@ variable "vm_memory" {
 
 variable "vm_name" {
   type    = string
-  default = "almalinux-8-10-x64-fr-server-template"
+  default = "almalinux-8-9-x64-us-server-template"
 }
 
 variable "ssh_password" {
@@ -82,7 +82,7 @@ variable "ludus_nat_interface" {
 ####
 
 locals {
-  template_description = "Almalinux 8 template built ${legacy_isotime("2024-05-04 00:25:00")} username:password => localuser:password"
+  template_description = "Almalinux 8 template built ${legacy_isotime("2024-05-25 10:01:00")} username:password => localuser:password"
 }
 
 source "proxmox-iso" "almalinux8" {

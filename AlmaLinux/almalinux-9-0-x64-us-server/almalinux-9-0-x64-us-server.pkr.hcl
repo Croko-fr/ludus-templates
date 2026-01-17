@@ -1,6 +1,6 @@
 variable "iso_checksum" {
   type    = string
-  default = "sha256:72fb1451e7d21418c2f4d94e63884fdb92dd7cba34d499dd4a070b6f5b4f150a"
+  default = "sha256:d9c644122aafdb3aa6b635d252d59d7f719fa5de5e77ec103eff9c5fe291c1b6"
 }
 
 # The operating system. Can be wxp, w2k, w2k3, w2k8, wvista, win7, win8, win10, l24 (Linux 2.4), l26 (Linux 2.6+), solaris or other. Defaults to other.
@@ -11,7 +11,7 @@ variable "os" {
 
 variable "iso_url" {
   type    = string
-  default = "https://vault.almalinux.org/8.10-beta/isos/x86_64/AlmaLinux-8.10-beta-1-x86_64-minimal.iso"
+  default = "https://raw.repo.almalinux.org/vault/9.0/isos/x86_64/AlmaLinux-9.0-x86_64-minimal.iso"
 }
 
 variable "vm_cpu_cores" {
@@ -31,7 +31,7 @@ variable "vm_memory" {
 
 variable "vm_name" {
   type    = string
-  default = "almalinux-8-10-x64-fr-server-template"
+  default = "almalinux-9-0-x64-us-server-template"
 }
 
 variable "ssh_password" {
@@ -82,12 +82,12 @@ variable "ludus_nat_interface" {
 ####
 
 locals {
-  template_description = "Almalinux 8 template built ${legacy_isotime("2024-05-04 00:25:00")} username:password => localuser:password"
+  template_description = "Almalinux 9 template built ${legacy_isotime("2006-01-02 03:04:05")} username:password => localuser:password"
 }
 
-source "proxmox-iso" "almalinux8" {
+source "proxmox-iso" "almalinux9" {
   boot_command = [
-     "<tab> text inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/almalinux-8-preseed.cfg<enter><wait>"
+     "<tab> text inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/almalinux-9-preseed.cfg<enter><wait>"
   ]
   boot_key_interval = "100ms"
   http_directory    = "./http"
@@ -130,7 +130,7 @@ source "proxmox-iso" "almalinux8" {
 }
 
 build {
-  sources = ["source.proxmox-iso.almalinux8"]
+  sources = ["source.proxmox-iso.almalinux9"]
 
   provisioner "ansible" {
     playbook_file = "ansible/reset-ssh-host-keys.yml"

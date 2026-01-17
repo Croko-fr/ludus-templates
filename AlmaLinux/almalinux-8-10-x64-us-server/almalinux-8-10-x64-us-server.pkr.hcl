@@ -1,6 +1,6 @@
 variable "iso_checksum" {
   type    = string
-  default = "sha256:e524329700abe47ce1f509bed7e2d3c68b336a54c712daa1b492b2429a64d419"
+  default = "sha256:72fb1451e7d21418c2f4d94e63884fdb92dd7cba34d499dd4a070b6f5b4f150a"
 }
 
 # The operating system. Can be wxp, w2k, w2k3, w2k8, wvista, win7, win8, win10, l24 (Linux 2.4), l26 (Linux 2.6+), solaris or other. Defaults to other.
@@ -11,7 +11,7 @@ variable "os" {
 
 variable "iso_url" {
   type    = string
-  default = "https://mirror.ibcp.fr/pub/almalinux/8.10/isos/x86_64/AlmaLinux-8.10-x86_64-minimal.iso"
+  default = "https://vault.almalinux.org/8.10-beta/isos/x86_64/AlmaLinux-8.10-beta-1-x86_64-minimal.iso"
 }
 
 variable "vm_cpu_cores" {
