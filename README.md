@@ -152,6 +152,13 @@ ludus templates list
 | Linux | Debian | 12.7 | Server | fr , us |
 | Linux | Debian | 12.8 | Server | fr , us |
 | Linux | Debian | 12.9 | Server | fr , us |
+| Linux | Debian | 12.10 | Server | fr , us |
+| Linux | Debian | 12.11 | Server | fr , us |
+| Linux | Debian | 12.12 | Server | fr , us |
+| Linux | Debian | 12.13 | Server | fr , us |
+| Linux | Debian | 13.0 | Server | fr , us |
+| Linux | Debian | 13.1 | Server | fr , us |
+| Linux | Debian | 13.2 | Server | fr , us |
 
 ### LINUX - KALI
 
