@@ -11,7 +11,7 @@ variable "os" {
 
 variable "iso_url" {
   type    = string
-  default = "https://cdimage.debian.org/debian-cd/12.9.0/amd64/iso-cd/debian-12.9.0-amd64-netinst.iso"
+  default = "https://cdimage.debian.org/cdimage/archive/12.9.0/amd64/iso-cd/debian-12.9.0-amd64-netinst.iso"
 }
 
 variable "vm_cpu_cores" {
@@ -82,7 +82,7 @@ variable "ludus_nat_interface" {
 ####
 
 locals {
-  template_description = "Debian 12 template built ${legacy_isotime("2006-01-02 03:04:05")} username:password => debian:debian"
+  template_description = "Debian 12.9 template built ${legacy_isotime("2006-01-02 03:04:05")} username:password => debian:debian"
 }
 
 source "proxmox-iso" "debian12" {
