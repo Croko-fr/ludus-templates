@@ -1,6 +1,6 @@
 variable "iso_checksum" {
   type    = string
-  default = "sha512:934336d266535c91fcd12cd122c81f8261721efa117fdcb9a31615caa96c5c5ce3454ed5f28f1b25a7b1b5f44631fdfa78a93adb6445e2e2caaf6455ab344cf8"
+  default = "sha256:93a84c80444d2ab0db33761a2ac5bb870ad33699a34b778d9cab3bf6fd0eadee"
 }
 
 # The operating system. Can be wxp, w2k, w2k3, w2k8, wvista, win7, win8, win10, l24 (Linux 2.4), l26 (Linux 2.6+), solaris or other. Defaults to other.
@@ -11,7 +11,7 @@ variable "os" {
 
 variable "iso_url" {
   type    = string
-  default = "https://cdimage.debian.org/mirror/cdimage/archive/10.8.0/amd64/iso-cd/debian-10.8.0-amd64-netinst.iso"
+  default = "https://cdimage.debian.org/mirror/cdimage/archive/10.8.0-live/amd64/iso-hybrid/debian-live-10.8.0-amd64-standard.iso"
 }
 
 variable "vm_cpu_cores" {
@@ -82,13 +82,13 @@ variable "ludus_nat_interface" {
 ####
 
 locals {
-  template_description = "Debian 10 template built ${legacy_isotime("2006-01-02 03:04:05")} username:password => debian:debian"
+  template_description = "Debian 10.8 template built ${legacy_isotime("2006-01-02 03:04:05")} username:password => debian:debian"
 }
 
 source "proxmox-iso" "debian10" {
   boot_command = [
-    "<down><tab>", # non-graphical install
-    "preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/debian-10-preseed.cfg ",
+    "<down><down><tab><wait>", # graphical install
+    " preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/debian-10-preseed.cfg ",
     "language=fr locale=fr_FR.UTF-8 ",
     "country=FR keymap=fr ",
     "hostname=debian10fr domain=local ",
