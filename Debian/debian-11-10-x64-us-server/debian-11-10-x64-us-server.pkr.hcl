@@ -1,6 +1,6 @@
 variable "iso_checksum" {
   type    = string
-  default = "sha512:7ef909042308510e42e2da38fa2815e4f39292b07026fc8cf1b12f3148e7329da7d24b01914fc7449895ee08a38f567f1e09c5f7a9bfaa65bb454ebfd0439f91"
+  default = "sha256:721ef40ba86c01b555ea85bb4ca7917d28cb65d56e57a0f56af90443f0aec6a3"
 }
 
 # The operating system. Can be wxp, w2k, w2k3, w2k8, wvista, win7, win8, win10, l24 (Linux 2.4), l26 (Linux 2.6+), solaris or other. Defaults to other.
@@ -82,7 +82,7 @@ variable "ludus_nat_interface" {
 ####
 
 locals {
-  template_description = "Debian 11 template built ${legacy_isotime("2006-01-02 03:04:05")} username:password => debian:debian"
+  template_description = "Debian 11.10 template built ${legacy_isotime("2006-01-02 03:04:05")} username:password => debian:debian"
 }
 
 source "proxmox-iso" "debian11" {
