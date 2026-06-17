@@ -6,6 +6,18 @@ For more information see: https://docs.ludus.cloud/docs/templates
 
 Here are some templates I'm using to get my ranges up.
 
+## Quick Start
+
+```bash
+# Add this source to your Ludus server via an interactive installer
+ludus source add https://github.com/badsectorlabs/ludus-source-bsl
+
+# Or, script the install of source resources
+ludus source add https://github.com/badsectorlabs/ludus-source-bsl --all
+
+# Build source templates for your ranges
+ludus templates build
+```
 
 ## Easy template installation steps
 
