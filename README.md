@@ -10,10 +10,10 @@ Here are some templates I'm using to get my ranges up.
 
 ```bash
 # Add this source to your Ludus server via an interactive installer
-ludus source add https://github.com/badsectorlabs/ludus-source-bsl
+ludus source add https://github.com/Croko-fr/ludus-templates.git
 
 # Or, script the install of source resources
-ludus source add https://github.com/badsectorlabs/ludus-source-bsl --all
+ludus source add https://github.com/Croko-fr/ludus-templates.git --all
 
 # Build source templates for your ranges
 ludus templates build
@@ -32,9 +32,9 @@ ludus templates build
 3. Add the templates from directory
 
 ```bash
-ludus templates add -d Debian/debian-10-10-x64-fr-server
-ludus templates add -d Debian/debian-12-8-x64-fr-server
-for filename in *-*; do ludus template add -d $filename; done;
+ludus templates add -d templates/debian-10-10-x64-fr-server
+ludus templates add -d templates/debian-12-8-x64-fr-server
+for filename in "templates/*-*"; do ludus template add -d $filename; done;
 ```
 
 4. Show templates list
