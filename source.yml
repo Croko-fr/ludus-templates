@@ -1,0 +1,7 @@
+manifest_version: 1
+name: "Croko-fr ludus-templates fr"
+description: "Repository for Ludus french templates"
+authors:
+  - "Croko-fr"
+homepage: https://github.com/Croko-fr/ludus-templates
+license: MIT License
