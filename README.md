@@ -79,14 +79,6 @@ ludus templates list
 +----------------------------------------------------+-------+
 ```
 
-## BEEING TESTED
-
-| OS type | Distribution | Version | Languages | Info |
-|:---:|:---:|:---:|:---:|:---:|
-| Microsoft | Windows Server | 2012 R2 | fr , us | |
-| Linux | Kali | 2024.4 | fr , us | Desktop , Recon |
-| Linux | Kali | 2024.4 | fr , us | Desktop , Web |
-
 ## TEMPLATES COVERAGE
 
 ### WINDOWS
@@ -101,6 +93,10 @@ ludus templates list
 | Microsoft | Windows Server | 2019 | fr , us | |
 | Microsoft | Windows Server | 2019 | fr , us | No security updates |
 | Microsoft | Windows Server | 2022 | fr , us | |
+| Microsoft | Windows Server | 2025 Standard GUI | fr , us | |
+| Microsoft | Windows Server | 2025 Standard Core | fr , us | |
+| Microsoft | Windows Server | 2025 Datacenter GUI | fr , us | |
+| Microsoft | Windows Server | 2025 Datacenter Core | fr , us | |
 
 ### LINUX - ALMALINUX
 
