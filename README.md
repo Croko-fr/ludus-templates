@@ -89,6 +89,7 @@ ludus templates list
 | Microsoft | Windows 10 | 22H2 | fr , us | |
 | Microsoft | Windows 11 | 22H2 | fr , us | |
 | Microsoft | Windows 11 | 23H2 | fr , us | | 
+| Microsoft | Windows 11 | 26H2 | fr , us | | 
 | Microsoft | Windows Server | 2016 | fr , us | |
 | Microsoft | Windows Server | 2019 | fr , us | |
 | Microsoft | Windows Server | 2019 | fr , us | No security updates |
