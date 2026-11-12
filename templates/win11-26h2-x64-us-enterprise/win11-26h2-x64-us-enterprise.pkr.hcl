@@ -92,7 +92,7 @@ variable "ludus_nat_interface" {
 ####
 
 locals {
-  template_description = "Windows 11 23H2 64-bit Enterprise template built ${legacy_isotime("2006-01-02 03:04:05")} username:password => localuser:password"
+  template_description = "Windows 11 26H2 64-bit Enterprise template built ${legacy_isotime("2006-01-02 03:04:05")} username:password => localuser:password"
 }
 
 source "proxmox-iso" "win11" {
