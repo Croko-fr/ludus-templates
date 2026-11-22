@@ -1,3 +1,13 @@
+variable "description" {
+  type    = string
+  default = "Almalinux 9.3 (Shamrock Pampas Cat) x64 server."
+}
+
+variable "icon_path" {
+  type    = string
+  default = "icon.png"
+}
+
 variable "iso_checksum" {
   type    = string
   default = "sha256:6624593b53c89195f7b68b2070a280d47b4276a7cbc10d2216661bf35d4f442b"

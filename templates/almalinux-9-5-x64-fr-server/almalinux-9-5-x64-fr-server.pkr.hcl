@@ -1,3 +1,13 @@
+variable "description" {
+  type    = string
+  default = "Almalinux 9.5 (Teal Serval) x64 server."
+}
+
+variable "icon_path" {
+  type    = string
+  default = "icon.png"
+}
+
 variable "iso_checksum" {
   type    = string
   default = "sha256:eef492206912252f2e24a74d3133b46cb4d240b54ffb3300a94000905b2590d3"

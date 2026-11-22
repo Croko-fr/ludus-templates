@@ -1,3 +1,13 @@
+variable "description" {
+  type    = string
+  default = "Almalinux 8.9 (Midnight Oncilla) x64 server."
+}
+
+variable "icon_path" {
+  type    = string
+  default = "icon.png"
+}
+
 variable "iso_checksum" {
   type    = string
   default = "sha256:fc866e1280e7b3f066b1380e831e33e7f3e78bc9db7bfc27744d569eadd974b3"
@@ -91,6 +101,14 @@ source "proxmox-iso" "almalinux8" {
   ]
   boot_key_interval = "100ms"
   http_directory    = "./http"
+  boot_iso {
+    iso_checksum             = "${var.iso_checksum}"
+    iso_url                  = "${var.iso_url}"
+    iso_storage_pool         = "${var.iso_storage_pool}"
+    iso_download_pve         = true
+    unmount                  = true
+    keep_cdrom_device        = true
+  }
 
   communicator    = "ssh"
   cores           = "${var.vm_cpu_cores}"
@@ -107,9 +125,6 @@ source "proxmox-iso" "almalinux8" {
   }
   pool                     = "${var.proxmox_pool}"
   insecure_skip_tls_verify = "${var.proxmox_skip_tls_verify}"
-  iso_checksum             = "${var.iso_checksum}"
-  iso_url                  = "${var.iso_url}"
-  iso_storage_pool         = "${var.iso_storage_pool}"
   memory                   = "${var.vm_memory}"
   network_adapters {
     bridge = "${var.ludus_nat_interface}"
@@ -125,7 +140,6 @@ source "proxmox-iso" "almalinux8" {
   ssh_password         = "${var.ssh_password}"
   ssh_username         = "${var.ssh_username}"
   ssh_wait_timeout     = "30m"
-  unmount_iso          = true
   task_timeout         = "20m" // On slow disks the imgcopy operation takes > 1m
 }
 

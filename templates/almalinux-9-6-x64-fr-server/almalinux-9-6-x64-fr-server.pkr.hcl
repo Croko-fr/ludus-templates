@@ -1,3 +1,13 @@
+variable "description" {
+  type    = string
+  default = "Almalinux 9.6 (Sage Margay) x64 server."
+}
+
+variable "icon_path" {
+  type    = string
+  default = "icon.png"
+}
+
 variable "iso_checksum" {
   type    = string
   default = "sha256:27a346c74d8755516a4ad2057ea29c2450454f1a928628734f26e12b0b8120d7"

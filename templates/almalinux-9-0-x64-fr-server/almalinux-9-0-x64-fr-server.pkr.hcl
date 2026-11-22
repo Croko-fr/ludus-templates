@@ -1,3 +1,13 @@
+variable "description" {
+  type    = string
+  default = "Almalinux 9.0 (Emerald Puma) x64 server."
+}
+
+variable "icon_path" {
+  type    = string
+  default = "icon.png"
+}
+
 variable "iso_checksum" {
   type    = string
   default = "sha256:d9c644122aafdb3aa6b635d252d59d7f719fa5de5e77ec103eff9c5fe291c1b6"

@@ -1,3 +1,13 @@
+variable "description" {
+  type    = string
+  default = "Almalinux 9.4 (Seafoam Ocelot) x64 server."
+}
+
+variable "icon_path" {
+  type    = string
+  default = "icon.png"
+}
+
 variable "iso_checksum" {
   type    = string
   default = "sha256:20123bb9f8319143e792b906137236bdcb0d10b023c36626ca2d8e9f62144eb9"

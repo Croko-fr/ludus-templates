@@ -1,3 +1,13 @@
+variable "description" {
+  type    = string
+  default = "Almalinux 9.2 (Turquoise Kodkod) x64 server."
+}
+
+variable "icon_path" {
+  type    = string
+  default = "icon.png"
+}
+
 variable "iso_checksum" {
   type    = string
   default = "sha256:51ee8c6dd6b27dcae16d4c11d58815d6cfaf464eb0e7c75e026f8d5cc530b476"

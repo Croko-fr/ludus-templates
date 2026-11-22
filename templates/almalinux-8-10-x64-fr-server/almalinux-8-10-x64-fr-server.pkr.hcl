@@ -1,3 +1,13 @@
+variable "description" {
+  type    = string
+  default = "Almalinux 8.10 (Cerulean Leopard) x64 server."
+}
+
+variable "icon_path" {
+  type    = string
+  default = "icon.png"
+}
+
 variable "iso_checksum" {
   type    = string
   default = "sha256:72fb1451e7d21418c2f4d94e63884fdb92dd7cba34d499dd4a070b6f5b4f150a"

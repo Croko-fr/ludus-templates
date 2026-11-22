@@ -1,3 +1,13 @@
+variable "description" {
+  type    = string
+  default = "Almalinux 8.9 (Midnight Oncilla) x64 server."
+}
+
+variable "icon_path" {
+  type    = string
+  default = "icon.png"
+}
+
 variable "iso_checksum" {
   type    = string
   default = "sha256:fc866e1280e7b3f066b1380e831e33e7f3e78bc9db7bfc27744d569eadd974b3"

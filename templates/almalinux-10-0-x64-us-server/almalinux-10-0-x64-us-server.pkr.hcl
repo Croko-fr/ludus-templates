@@ -1,3 +1,13 @@
+variable "description" {
+  type    = string
+  default = "Almalinux xx.xx (..... .....) x64 server."
+}
+
+variable "icon_path" {
+  type    = string
+  default = "icon.png"
+}
+
 variable "iso_checksum" {
   type    = string
   default = "sha256:e73ccc95ff21a43ab23eebe227257fa34df091570b2bcf8a23f918bf9b662fc3"

@@ -1,3 +1,13 @@
+variable "description" {
+  type    = string
+  default = "Almalinux 9.1 (Lime Lynx) x64 server."
+}
+
+variable "icon_path" {
+  type    = string
+  default = "icon.png"
+}
+
 variable "iso_checksum" {
   type    = string
   default = "sha256:3eebd50aabe93b9cbea3937dcf5e1d893e397a36de128ae60a8d46ff048fa0d6"
