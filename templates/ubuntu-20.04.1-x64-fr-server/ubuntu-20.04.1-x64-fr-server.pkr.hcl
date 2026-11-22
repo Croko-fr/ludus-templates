@@ -1,3 +1,8 @@
+variable "description" {
+  type    = string
+  default = "Ubuntu 20.04 LTS (Focal Fossa) x64 server."
+}
+
 variable "icon_path" {
   type    = string
   default = "icon.png"

@@ -1,3 +1,8 @@
+variable "description" {
+  type    = string
+  default = "Ubuntu 24.04 LTS (Noble Numbat) x64 desktop."
+}
+
 variable "icon_path" {
   type    = string
   default = "icon.png"

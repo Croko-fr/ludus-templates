@@ -1,3 +1,8 @@
+variable "description" {
+  type    = string
+  default = "Ubuntu 22.04 LTS (Jammy Jellyfish) x64 server."
+}
+
 variable "icon_path" {
   type    = string
   default = "icon.png"
