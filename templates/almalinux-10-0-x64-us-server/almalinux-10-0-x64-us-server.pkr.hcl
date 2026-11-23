@@ -1,6 +1,6 @@
 variable "description" {
   type    = string
-  default = "Almalinux xx.xx (..... .....) x64 server."
+  default = "Almalinux 10.0 (Purple Lion) x64 server."
 }
 
 variable "icon_path" {
